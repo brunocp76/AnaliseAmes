@@ -1,0 +1,20 @@
+Package: AnaliseAmes
+Title: Resolvendo o Exercicio 5
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Bruno Cesar",
+           family = "Pasquini",
+           role = c("aut", "cre"),
+           email = "Bruno.Pasquini@gmail.com",
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: Este banco de dados apresenta informacoes sobre 2930 casas que foram
+   vendidas na cidade de Ames, no estado de Iowa, nos Estados Unidos.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Imports: 
+    magrittr
+Depends: 
+    R (>= 2.10)
