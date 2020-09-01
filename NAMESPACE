@@ -3,4 +3,5 @@
 export("%>%")
 export(analisa)
 export(pegar_num_NAs)
+export(sumarizar_venda_media)
 importFrom(magrittr,"%>%")
