@@ -30,7 +30,7 @@ analisa <- function(){
       )
 
    modelo_glm <- ames %>%
-      dplyr::select(where(is.numeric)) %>%
+      dplyr::select(dplyr::where(is.numeric)) %>%
       stats::glm(formula = as.vector(ames$venda_valor) ~ .,
                  family = gaussian(link = "log"))
 

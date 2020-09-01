@@ -11,13 +11,13 @@
 #' @export
 pegar_num_NAs <- function(tab, nome_coluna, prop = FALSE) {
    com_na <- tab %>%
-      filter_at(vars(nome_coluna), is.na) %>%
-      count() %>%
+      dplyr::filter_at(dplyr::vars(nome_coluna), is.na) %>%
+      dplyr::count() %>%
       as.integer()
 
    total <- tab %>%
-      select(nome_coluna) %>%
-      count() %>%
+      dplyr::select(nome_coluna) %>%
+      dplyr::count() %>%
       as.integer()
 
    if (prop) {

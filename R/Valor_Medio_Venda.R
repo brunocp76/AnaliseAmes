@@ -10,12 +10,13 @@
 #' @export
 sumarizar_venda_media <- function(tab, nome_coluna) {
    tab %>%
-      dplyr::group_by(across(nome_coluna)) %>%
+      dplyr::group_by(dplyr::across(nome_coluna)) %>%
       dplyr::summarise(
          valor_medio_venda = mean(venda_valor,
                                   na.rm = TRUE)
       ) %>%
-      dplyr::arrange(desc(valor_medio_venda), nome_coluna) %>%
+      dplyr::arrange(dplyr::desc(valor_medio_venda),
+                     nome_coluna) %>%
       dplyr::ungroup() %>%
       dplyr::mutate(
          valor_medio_venda = scales::comma(x = valor_medio_venda,
